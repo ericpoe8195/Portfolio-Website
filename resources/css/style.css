@@ -1,0 +1,271 @@
+/*  Universal Styles  */
+
+* {
+  padding: 0 0;
+  margin: 0 0;/*
+  border: 1px solid lightblue;*/
+  font-family: 'Overpass', sans-serif;
+}
+
+section {
+  max-width: 60rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+
+
+/*  Font Styles  */
+h1 {
+  font-family: monospace;
+  font-size: 5rem;
+  margin: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+
+
+/*  Main  */
+
+main {
+  background-color: #0d47a1;
+  color: #fff;
+}
+
+
+
+/*  Header  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #002171;
+}
+
+.logo a {
+  margin: .75rem 1.5rem;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  color: #a5d6a7;
+  transition: color .25s, text-shadow .25s;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #d7ffd9;
+  text-shadow: 0px 0px 5px #aaa;
+}
+
+nav {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 875px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+  }
+}
+
+nav li {
+  display: inline;
+  font-size: 1.75rem;
+  margin-right: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #a5d6a7;
+  font-weight: lighter;
+  transition: color .25s;
+}
+
+nav a:hover {
+  color: #75a478;
+}
+
+
+/*  About Me  */
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me h1 {
+  font-family: 'Nova Mono', monospace;
+}
+
+.about-me p {
+  font-size: 1.5rem;
+  opacity: .8;
+}
+
+.profile-pic-cropper {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #a5d6a7;
+  margin: 3rem;
+}
+
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  margin-left: 0%;
+  height: 100%;
+  width: auto;
+}
+
+
+
+/*  Projects  */
+
+/*  Skills  */
+
+.skill-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-gallery .card {
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem;
+  text-align: center;
+  display: inline-block;
+  animation: animationOut .5s ease-in-out forwards;
+}
+
+.skill-gallery .card:hover {
+  animation: animationIn .5s ease-in-out forwards;
+}
+
+.skill-gallery p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate3d(0, 1, 0, 180deg);
+  animation: visibleOff .5s ease-in-out both;
+  visibility: hidden;
+}
+
+.skill-gallery .card:hover > p {
+  animation: visibleOn .5s ease-in-out both;
+}
+
+.skill-gallery img {
+  width: 100%;
+  animation: visibleOn .5s ease-in-out both;
+}
+
+.skill-gallery .card:hover > img {
+  animation: visibleOff .5s ease-in-out both;
+}
+
+@keyframes animationIn {
+    0%{
+      transform: rotate3d(0, 1, 0, 0deg);
+    }
+    100%{
+      transform: rotate3d(0, 1, 0, 180deg);
+    }
+  }
+
+  @keyframes animationOut {
+      0%{
+        transform: rotate3d(0, 1, 0, 180deg);
+      }
+      100%{
+        transform: rotate3d(0, 1, 0, 0deg);
+      }
+    }
+
+  @keyframes visibleOn {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes visibleOff {
+    0% {
+      visibility: visible;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: hidden
+    }
+  }
+
+
+
+/*  Contact  */
+
+.contact .button-container {
+  background-color: #a5d6a7;
+  display: inline-flex;
+  padding: 1rem 1rem;
+  align-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  transition: background-color .5s;
+}
+
+.contact .button-container:hover {
+  background-color: #75a478;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact i {
+  color: black;
+  font-size: 2rem;
+}
+
+.contact .button-container p {
+  color: black;
+  margin-left: 1rem;
+}
+
+
+
+/*  Footer  */
+footer {
+  background-color: #5472d3;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  text-align: center;
+  margin: 1rem auto;
+}
