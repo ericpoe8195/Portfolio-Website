@@ -21,6 +21,7 @@ h1 {
   font-family: monospace;
   font-size: 5rem;
   margin: 3rem;
+  cursor: default;
 }
 
 h2 {
@@ -39,7 +40,7 @@ p {
 main {
   background-color: #0d47a1;
   color: #fff;
-  transition: all 1s;
+  transition: all 2s;
 }
 
 
@@ -51,7 +52,7 @@ header {
   justify-content: space-between;
   background-color: #002171;
   border-bottom: 3px solid #a5d6a7;
-  transition: all 1s;
+  transition: all 2s;
 }
 
 .logo a {
@@ -277,7 +278,7 @@ footer {
   display: flex;
   justify-content: center;
   cursor: default;
-  transition: all 1s;
+  transition: all 2s;
 }
 
 footer p {
