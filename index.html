@@ -12,11 +12,14 @@
     <!--  Font awesome  -->
     <script src="https://kit.fontawesome.com/86d3024cdb.js" crossorigin="anonymous"></script>
 
+    <!--  Javascript  -->
+    <script src="./resources/js/script.js" async></script>
+
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="logo">
-        <a href="./index.html">Eric Poe</a>
+        <a id="logo" href="./index.html">Eric Poe</a>
       </div>
       <nav>
         <ul>
@@ -31,15 +34,16 @@
 
       <!--  About Me  -->
       <section class="about-me" id="about-me">
-        <!--
-        <h1>Hello World!<br>I'm Eric.</h1> <!-- Make second line less opaque. -->
         <h1>Hello World!<br>I'm Eric.</h1>
         <!--  bio  -->
         <p>I'm a manufacturing engineer turned web developer. I still have a lot to learn, and I love that! I'm currently consuming as much front-end web development content as I can while still leaving time for my other hobbies: drumming, hiking, camping, water skiing, surfing, working out, and eating.</p>
         <!--  profile-pic  -->
-        <div class="profile-pic-cropper">
-          <img class="profile-pic" src="./resources/images/profile-pic.jpeg" alt="A picture of me on a backpacking trip.">
+        <div class="prof-pic-container">
+          <div id="prof-pic" class="profile-pic-cropper">
+            <img class="profile-pic" src="./resources/images/profile-pic.jpeg" alt="A picture of me on a backpacking trip.">
+          </div>
         </div>
+        <p>Click the picture to give this page a new look!</p>
         </section>
 
       <!--  Projects  -->
@@ -92,7 +96,7 @@
         <h2>Contact</h2>
         <p>Have an interesting project? I would love to hear about it!</p>
         <a href="mailto:ericpoe8195@gmail.com" target="_blank">
-          <div class="button-container">
+          <div id = "email" class="button-container">
             <i class="far fa-envelope"></i>
             <p>Email me!</p>
           </div>
