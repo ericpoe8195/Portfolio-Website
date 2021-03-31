@@ -171,7 +171,7 @@ nav a {
   text-align: center;
   display: inline-block;
   animation: animationOut .5s ease-in-out forwards;
-  cursor: default;
+  cursor: pointer;
 }
 
 .skill-gallery .card:hover {
@@ -180,6 +180,7 @@ nav a {
 
 .skill-gallery p {
   position: absolute;
+  color: white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate3d(0, 1, 0, 180deg);
